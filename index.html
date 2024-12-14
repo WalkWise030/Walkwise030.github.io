@@ -278,7 +278,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-size: 12px;
+            font-size: 14px;
             font-weight: bold;
         }
 
@@ -509,7 +509,7 @@
                 <button id="toggleDiversity" class="btn">Diversity</button>
                 <button id="toggleDensity" class="btn">Density</button>
                 <button id="toggleDesign" class="btn">Design</button>
-                
+
             </div>
         </div>
         <img id="day-night-toggle" src="/data/moon.png" alt="Toggle Day/Night" onclick="toggleDayNight()">
@@ -555,8 +555,8 @@
         const DAYDens_3 = '#7bccc4';      // Softer orange
         const DAYDens_4 = '#43a2ca';      // Coral for a softer red
         const DAYDens_5 = '#0868ac';      // Softer red
-        const DAYDens_REST = '#B0B3B6';  
-        
+        const DAYDens_REST = '#B0B3B6';
+
         const DAYDiv_0 = '#f0f9e8';      // Softer green
         const DAYDiv_1 = '#ccebc5';      // Muted light green
         const DAYDiv_2 = '#a8ddb5';      // Retaining gold for visibility
@@ -572,7 +572,7 @@
         const DAYDes_4 = '#354f52';      // Coral for a softer red
         const DAYDes_5 = '#2f3e46';      // Softer red
         const DAYDes_REST = '#B0B3B6'; // Light gray for rest
-        
+
 
         const NGT_0 = '#00FF00';
         const NGT_1 = '#A4D65E';
@@ -734,7 +734,7 @@
 
             ]
         }
-        
+
         const fillPaintDist = {
             // Fill color based on edge_class property
             'fill-color': [
@@ -1048,7 +1048,7 @@
                         'line-cap': 'round'
                     }
                 },
-                
+
                 {
                     id: 'walk-poly-line',
                     source: 'walk-poly',
@@ -1149,7 +1149,7 @@
                         'line-cap': 'round'
                     }
                 }
-                
+
 
             ];
 
@@ -2107,7 +2107,7 @@
                 currentPopup.remove();
             }
 
-            const features = map.queryRenderedFeatures(e.point, { layers: ['road', 'building', 'landuse', 'poi-label', 'amenity-distance-line', 'amenity-distance-poly-line', 'bus-proximity-line','bus-proximity-poly-line', 'diversity-line','diversity-poly-line', 'density-line','density-poly-line', 'design-line', 'design-poly-line','walk-line', 'walk-poly-line'] });
+            const features = map.queryRenderedFeatures(e.point, { layers: ['road', 'building', 'landuse', 'poi-label', 'amenity-distance-line', 'amenity-distance-poly-line', 'bus-proximity-line', 'bus-proximity-poly-line', 'diversity-line', 'diversity-poly-line', 'density-line', 'density-poly-line', 'design-line', 'design-poly-line', 'walk-line', 'walk-poly-line'] });
 
             if (!features.length) {
                 return;
@@ -2375,7 +2375,7 @@
                         }
                     };
                 }
-            }else if (visibleLayers['bus-proximity-poly-line'] && feature.layer.id === 'bus-proximity-poly-line') {
+            } else if (visibleLayers['bus-proximity-poly-line'] && feature.layer.id === 'bus-proximity-poly-line') {
                 const edgeClass = feature.properties.edge_class || 0;
                 const blockNumber = feature.properties.Block_Number || 'N/A';
                 const blockName = feature.properties.District_Name || 'N/A';
